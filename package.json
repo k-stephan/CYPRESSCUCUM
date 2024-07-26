@@ -1,0 +1,28 @@
+{
+  "name": "reportscucum",
+  "version": "2.0.0",
+  "description": "marsreportscucum",
+  "main": "index.js",
+  "type": "module",
+
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "stephen",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^13.13.1",
+    "node-fetch": "^2.6.1"
+  },
+  "devDependencies": {
+    "cypress-cucumber-preprocessor": "^4.3.1"
+  },
+  "include": [
+    "./node_modules/cypress",
+    "cypress/**/*.js"
+  ],
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": false,
+    "step_definitions": "cypress/e2e/Tests"
+  }
+}
